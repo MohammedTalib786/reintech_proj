@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Demo styles -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+        :root {
+            --primary-clr: #1BBC9B;
+            --half-black: #1D1D1D;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        h2,
+        h4 {
+            font-family: "open sans";
+            font-size: 28px;
+            line-height: 34px;
+            font-weight: 600;
+        }
+
+        h3 {
+            font-family: "open sans";
+            font-size: 22px;
+            line-height: 28px;
+            font-weight: 600;
+        }
+
+        p {
+            font-family: "open sans";
+            font-size: 14px;
+            line-height: 20px;
+            margin-bottom: 0;
+        }
+
+        .btn {
+            font-family: "open sans";
+            font-size: 16px;
+            line-height: 24px;
+            text-transform: uppercase;
+            font-weight: 400;
+            border: 0;
+            background: var(--primary-clr);
+        }
+
+        .container {
+            max-width: 1440px;
+        }
+
+        .icon_section>div {
+            gap: 110px;
+
+        }
+
+        /* .icon_section .btn {
+      pad
+    } */
+
+        .spotlight_sec>div:first-child {
+            /* background-color: blue; */
+            width: 55%;
+        }
+
+        .spotlight_sec h5 {
+            color: #C1C1C1;
+            font-family: "open sans";
+            font-size: 22px;
+            line-height: 26px;
+            margin-bottom: 0;
+            font-weight: 300;
+        }
+
+        .spotlight_sec input[type=text] {
+            background: transparent;
+            font-family: "open sans";
+            font-size: 16px;
+            line-height: 22px;
+            color: #A8A8A8;
+        }
+
+        .spotlight_sec input[type=text]::placeholder {
+            color: #A8A8A8;
+            font-family: "open sans";
+            font-size: 16px;
+            line-height: 22px;
+        }
+
+        .highlight-box {
+            width: 45%;
+            background: var(--half-black);
+            color: white;
+            padding: 80px 60px;
+        }
+
+        .highlight-box input {
+            margin-bottom: 10px;
+        }
+
+        .highlight-badge {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: var(--primary-clr);
+            color: white;
+            padding: 10px;
+        }
+
+        .testimonial {
+            padding: 40px;
+            text-align: center;
+        }
+
+        .hot_property_section {
+            padding: 30px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+                <div class="testimonial">
+                    <img src="resources/task/testimonial.png" alt="">
+                    <p class="mb-0">“I’m wondering why I never contacted these guys sooner! Seriously, they all have commendable talent in their respective field and knocked my concept out of the ballpark. Thanks for an amazing experience!”</p>
+                    <p class="blockquote-footer">- Segera, NoranicMeds</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="testimonial">
+                    <img src="resources/task/testimonial.png" alt="">
+                    <p class="mb-0">“I’m wondering why I never contacted these guys sooner! Seriously, they all have commendable talent in their respective field and knocked my concept out of the ballpark. Thanks for an amazing experience!”</p>
+                    <p class="blockquote-footer">- Segera, NoranicMeds</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="testimonial">
+                    <img src="resources/task/testimonial.png" alt="">
+                    <p class="mb-0">“I’m wondering why I never contacted these guys sooner! Seriously, they all have commendable talent in their respective field and knocked my concept out of the ballpark. Thanks for an amazing experience!”</p>
+                    <p class="blockquote-footer">- Segera, NoranicMeds</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            loop: true,
+            autoplay: {
+                delay: 1500, // Time in milliseconds between transitions
+                disableOnInteraction: false,
+            },
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'bullets',
+            },
+        });
+    </script>
+</body>
+
+</html>
